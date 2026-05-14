@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/*
+ * Color Palette
+ * =============
+ * Primary (Rose accent):
+ *   rose-400: #fb7185
+ *   rose-500: #f43f5e (hover)
+ *
+ * Text:
+ *   gray-800: #1f2937 (headings)
+ *   gray-600: #4b5563 (body)
+ *   gray-500: #6b7280 (faint)
+ *   gray-400: #9ca3af (muted)
+ *
+ * Backgrounds:
+ *   white: #ffffff (light)
+ *   gray-900: #111827 (dark/footer)
+ *
+ * Borders:
+ *   gray-100: #f3f4f6 (light)
+ *   gray-800: #1f2937 (dark)
+ *
+ * Overlay:
+ *   black/40: rgba(0, 0, 0, 0.4)
+ */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
