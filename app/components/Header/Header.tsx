@@ -17,8 +17,6 @@ const Header = ({
     heroImage = yogaPlaceholderOne,
     headline = "Find Your Balance",
     subtitle = "Yoga classes in London with Caterina Giordo",
-    ctaText = "Book a Class",
-    ctaHref = "/book",
 }: HeaderProps) => {
     return (
         <header className="w-full">
@@ -50,12 +48,6 @@ const Header = ({
                     <p className="mt-4 text-lg sm:text-xl text-white/90 max-w-xl">
                         {subtitle}
                     </p>
-                    <a
-                        href={ctaHref}
-                        className="mt-8 px-8 py-3 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
-                    >
-                        {ctaText}
-                    </a>
                 </div>
             </div>}
         </header>

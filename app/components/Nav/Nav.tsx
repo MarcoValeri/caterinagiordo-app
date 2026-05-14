@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { GiLotusFlower } from "react-icons/gi";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Classes", href: "/classes" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -17,30 +17,30 @@ const Nav = () => {
   return (
     <>
       {/* Logo / Brand */}
-      <a href="/" className="flex items-center gap-2 group">
+      <Link href="/" className="flex items-center gap-2 group">
         <GiLotusFlower className="text-3xl text-rose-400 group-hover:text-rose-500 transition-colors" />
         <span className="text-lg font-semibold tracking-wide text-gray-800">
           Caterina Giordo
         </span>
-      </a>
+      </Link>
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-8">
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.label}
             href={link.href}
             className="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
-        <a
-          href="/book"
+        <Link
+          href="/classes"
           className="ml-2 px-4 py-2 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
         >
-          Book a Class
-        </a>
+          Classes
+        </Link>
       </nav>
 
       {/* Mobile Menu Button */}
@@ -64,20 +64,20 @@ const Nav = () => {
       >
         <div className="px-4 py-4 space-y-3">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="block text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="/book"
+          <Link
+            href="/classes"
             className="block mt-3 text-center px-4 py-2 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
           >
-            Book a Class
-          </a>
+            Classes
+          </Link>
         </div>
       </nav>
     </>
