@@ -5,7 +5,7 @@ import yogaPlaceholderOne from "../../assets/images/yoga-placeholder-one.jpg";
 
 interface HeaderProps {
     showHero: boolean;
-    heroImage: StaticImageData;
+    heroImage?: StaticImageData;
     headline?: string;
     subtitle?: string;
     ctaText?: string;

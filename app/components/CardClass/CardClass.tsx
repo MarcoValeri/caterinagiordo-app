@@ -35,7 +35,7 @@ const CardClass = ({
     const isExternal = linkType === LinkType.External;
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
             {/* Header: Title + Badge */}
             <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
