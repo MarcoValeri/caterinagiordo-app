@@ -64,6 +64,21 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Newsletter CTA */}
+        <div className="mt-10 pt-8 border-t border-gray-800 text-center">
+          <p className="text-sm text-gray-400 mb-4">
+            Stay up to date with class schedules and wellness tips
+          </p>
+          <a
+            href="https://mailchimp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 hover:shadow-lg hover:shadow-rose-900/20 transition-all duration-300"
+          >
+            Subscribe to my Newsletter
+          </a>
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
           <p>
