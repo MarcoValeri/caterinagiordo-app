@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { GiLotusFlower } from "react-icons/gi";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -13,6 +14,7 @@ const navLinks = [
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -26,18 +28,29 @@ const Nav = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-8">
-        {navLinks.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            className="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors"
-          >
-            {link.label}
-          </Link>
-        ))}
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`text-sm font-medium transition-colors ${
+                isActive
+                  ? "text-rose-500 border-b-2 border-rose-400 pb-0.5"
+                  : "text-gray-600 hover:text-rose-500"
+              }`}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
         <Link
           href="/classes"
-          className="ml-2 px-4 py-2 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+          className={`ml-2 px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+            pathname === "/classes"
+              ? "text-rose-500 bg-rose-100"
+              : "text-white bg-rose-400 hover:bg-rose-500"
+          }`}
         >
           Classes
         </Link>
@@ -63,18 +76,29 @@ const Nav = () => {
         }`}
       >
         <div className="px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="block text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`block text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-rose-500"
+                    : "text-gray-600 hover:text-rose-500"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
             href="/classes"
-            className="block mt-3 text-center px-4 py-2 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+            className={`block mt-3 text-center px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              pathname === "/classes"
+                ? "text-rose-500 bg-rose-100"
+                : "text-white bg-rose-400 hover:bg-rose-500"
+            }`}
           >
             Classes
           </Link>
