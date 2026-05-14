@@ -1,4 +1,5 @@
-import { HiOutlineClock, HiOutlineLocationMarker, HiOutlineExternalLink } from "react-icons/hi";
+import { HiOutlineClock, HiOutlineLocationMarker } from "react-icons/hi";
+import Link from "next/link";
 
 enum LinkType {
     Internal,
@@ -81,15 +82,26 @@ const CardClass = ({
                 </div>
             )}
 
-            {/* CTA Link */}
-            <a
-                href={link}
-                {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
-                className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-rose-400 hover:text-rose-500 transition-colors"
-            >
-                Book this class
-                {isExternal && <HiOutlineExternalLink className="text-base" />}
-            </a>
+            {/* CTA Button */}
+            <div className="mt-auto pt-2">
+                {isExternal ? (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+                    >
+                        Book this class
+                    </a>
+                ) : (
+                    <Link
+                        href={link}
+                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+                    >
+                        Book this class
+                    </Link>
+                )}
+            </div>
         </div>
     );
 };

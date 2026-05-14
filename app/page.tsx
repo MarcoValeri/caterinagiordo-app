@@ -16,7 +16,7 @@ const HomePage = () => {
                 ctaHref = "/book"
             />
             <main>
-                <SectionClasses />
+                <SectionClasses limit={3} />
             </main>
             <Footer />
         </>

@@ -1,4 +1,5 @@
 import CardClass, { LinkType, ClassType } from "../CardClass/CardClass";
+import ButtonLink from "../ButtonLink/ButtonLink";
 
 const fakeClasses = [
   {
@@ -187,7 +188,14 @@ const fakeClasses = [
   },
 ];
 
-const SectionClasses = () => {
+interface SectionClassesProps {
+  limit?: number;
+}
+
+const SectionClasses = ({ limit }: SectionClassesProps) => {
+  const classesToShow = limit ? fakeClasses.slice(0, limit) : fakeClasses;
+  const showViewAll = limit && limit < fakeClasses.length;
+
   return (
     <section className="w-full py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,10 +203,15 @@ const SectionClasses = () => {
           Upcoming Classes
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {fakeClasses.map((classItem, index) => (
+          {classesToShow.map((classItem, index) => (
             <CardClass key={index} {...classItem} />
           ))}
         </div>
+        {showViewAll && (
+          <div className="mt-10 text-center">
+            <ButtonLink href="/classes" label="View all classes" />
+          </div>
+        )}
       </div>
     </section>
   );
