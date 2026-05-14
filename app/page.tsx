@@ -2,6 +2,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 import yogaPlaceholder from "./assets/images/yoga-placeholder-one.jpg";
+import SectionClasses from "./components/SectionClasses/SectionClasses";
 
 const HomePage = () => {
     return (
@@ -15,7 +16,7 @@ const HomePage = () => {
                 ctaHref = "/book"
             />
             <main>
-                <h2>Main</h2>
+                <SectionClasses />
             </main>
             <Footer />
         </>
