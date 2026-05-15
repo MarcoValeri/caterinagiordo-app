@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { GiLotusFlower } from "react-icons/gi";
+import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
+import logo from "../../assets/images/caterina-giordo-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -20,7 +21,13 @@ const Nav = () => {
     <>
       {/* Logo / Brand */}
       <Link href="/" className="flex items-center gap-2 group">
-        <GiLotusFlower className="text-3xl text-rose-400 group-hover:text-rose-500 transition-colors" />
+        <Image
+          src={logo}
+          alt="Caterina Giordo"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
         <span className="text-lg font-semibold tracking-wide text-gray-800">
           Caterina Giordo
         </span>
