@@ -1,0 +1,676 @@
+{
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "amplify:deployment-type",
+          "value": "sandbox"
+        },
+        {
+          "key": "created-by",
+          "value": "amplify"
+        }
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/deploymentType": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "deploymentType"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/region": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "region"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/userPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "userPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/webClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "webClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/identityPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "identityPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/authRegion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "authRegion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/allowUnauthenticatedIdentities": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "allowUnauthenticatedIdentities"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/signupAttributes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "signupAttributes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/usernameAttributes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "usernameAttributes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/verificationMechanisms": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "verificationMechanisms"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/passwordPolicyMinLength": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordPolicyMinLength"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/passwordPolicyRequirements": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordPolicyRequirements"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/mfaConfiguration": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "mfaConfiguration"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/mfaTypes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "mfaTypes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/passwordlessOptions": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordlessOptions"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/socialProviders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "socialProviders"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthCognitoDomain": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthCognitoDomain"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthScope": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthScope"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthRedirectSignIn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthRedirectSignIn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthRedirectSignOut": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthRedirectSignOut"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthResponseType": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthResponseType"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/oauthClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/groups": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "groups"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthUserPoolD6623E2DRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthUserPoolD6623E2DRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthUserPoolAppClientE81C23ACRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthUserPoolAppClientE81C23ACRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthIdentityPool83734C14Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifycaterinagiordoappmarcovalerisandbox818288b041authamplifyAuthIdentityPool83734C14Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth.NestedStack/auth.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "auth179371D7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/IdentityPool": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthIdentityPool3FDE84CC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/UserPool/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthUserPool4BA7F805"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/UserPoolAppClient/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthUserPoolAppClient2626C6F8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/authenticatedUserRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ],
+  "/amplify-caterinagiordoapp-marcovaleri-sandbox-818288b041/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/Users/marcovaleri/Documents/github/caterinagiordo-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib, @aws-amplify/backend-deployer, @aws-amplify/sandbox, @aws-amplify/backend-cli..."
+      ]
+    }
+  ]
+}

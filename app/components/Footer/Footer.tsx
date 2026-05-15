@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <a href="/" className="flex items-center gap-2 group">
-              <GiLotusFlower className="text-2xl text-rose-400 group-hover:text-rose-500 transition-colors" />
+              <GiLotusFlower className="text-2xl text-[#0F4C5C] group-hover:text-[#45858C] transition-colors" />
               <span className="text-lg font-semibold text-white">
                 Caterina Giordo
               </span>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-rose-400 transition-colors"
+                    className="text-sm text-gray-400 hover:text-[#45858C] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -55,7 +55,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:hello@caterinagiordo.com"
-                  className="hover:text-rose-400 transition-colors"
+                  className="hover:text-[#45858C] transition-colors"
                 >
                   hello@caterinagiordo.com
                 </a>
@@ -73,7 +73,7 @@ const Footer = () => {
             href="https://mailchimp.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 hover:shadow-lg hover:shadow-rose-900/20 transition-all duration-300"
+            className="inline-block px-6 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] hover:shadow-lg hover:shadow-[#0F4C5C]/20 transition-all duration-300"
           >
             Subscribe to my Newsletter
           </a>

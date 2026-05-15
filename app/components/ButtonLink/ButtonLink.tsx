@@ -9,7 +9,7 @@ interface ButtonLinkProps {
 
 const ButtonLink = ({ href, label, isExternal = false }: ButtonLinkProps) => {
   const className =
-    "group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-rose-400 rounded-full overflow-hidden transition-all duration-300 hover:bg-rose-500 hover:shadow-lg hover:shadow-rose-200 hover:scale-105 active:scale-95";
+    "group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-[#0F4C5C] rounded-full overflow-hidden transition-all duration-300 hover:bg-[#45858C] hover:shadow-lg hover:shadow-[#B2DFDB] hover:scale-105 active:scale-95";
 
   if (isExternal) {
     return (

@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { GiLotusFlower } from "react-icons/gi";
+import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
+import logo from "../../assets/images/caterina-giordo-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -20,7 +21,13 @@ const Nav = () => {
     <>
       {/* Logo / Brand */}
       <Link href="/" className="flex items-center gap-2 group">
-        <GiLotusFlower className="text-3xl text-rose-400 group-hover:text-rose-500 transition-colors" />
+        <Image
+          src={logo}
+          alt="Caterina Giordo"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
         <span className="text-lg font-semibold tracking-wide text-gray-800">
           Caterina Giordo
         </span>
@@ -36,8 +43,8 @@ const Nav = () => {
               href={link.href}
               className={`text-sm font-medium transition-colors ${
                 isActive
-                  ? "text-rose-500 border-b-2 border-rose-400 pb-0.5"
-                  : "text-gray-600 hover:text-rose-500"
+                  ? "text-[#45858C] border-b-2 border-[#0F4C5C] pb-0.5"
+                  : "text-gray-600 hover:text-[#45858C]"
               }`}
             >
               {link.label}
@@ -48,8 +55,8 @@ const Nav = () => {
           href="/classes"
           className={`ml-2 px-4 py-2 text-sm font-medium rounded-full transition-colors ${
             pathname === "/classes"
-              ? "text-rose-500 bg-rose-100"
-              : "text-white bg-rose-400 hover:bg-rose-500"
+              ? "text-[#0F4C5C] bg-[#E0F2F1]"
+              : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
           }`}
         >
           Classes
@@ -58,7 +65,7 @@ const Nav = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden p-2 text-gray-600 hover:text-rose-500 transition-colors cursor-pointer"
+        className="md:hidden p-2 text-gray-600 hover:text-[#45858C] transition-colors cursor-pointer"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
       >
@@ -84,8 +91,8 @@ const Nav = () => {
                 href={link.href}
                 className={`block text-sm font-medium transition-colors ${
                   isActive
-                    ? "text-rose-500"
-                    : "text-gray-600 hover:text-rose-500"
+                    ? "text-[#45858C]"
+                    : "text-gray-600 hover:text-[#45858C]"
                 }`}
               >
                 {link.label}
@@ -96,8 +103,8 @@ const Nav = () => {
             href="/classes"
             className={`block mt-3 text-center px-4 py-2 text-sm font-medium rounded-full transition-colors ${
               pathname === "/classes"
-                ? "text-rose-500 bg-rose-100"
-                : "text-white bg-rose-400 hover:bg-rose-500"
+                ? "text-[#0F4C5C] bg-[#E0F2F1]"
+                : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
             }`}
           >
             Classes
