@@ -11,11 +11,11 @@ const AboutPage = async () => {
             <main className="flex-1">
                 {/* Intro Section */}
                 <section className="w-full py-16">
-                    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-3xl font-light text-gray-800 mb-6">
-                            About Caterina
+                    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-3xl font-light text-gray-800 mb-6 text-center">
+                            About Me
                         </h2>
-                        <div className="text-gray-600 leading-relaxed space-y-4">
+                        <div className="prose prose-gray max-w-none">
                             {content?.aboutIntro ? (
                                 <div dangerouslySetInnerHTML={{ __html: content.aboutIntro }} />
                             ) : (
@@ -50,7 +50,7 @@ const AboutPage = async () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Balance
                                 </h3>
-                                <div className="text-sm text-gray-600 leading-relaxed">
+                                <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.aboutPhilosophyBalance ? (
                                         <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyBalance }} />
                                     ) : (
@@ -65,7 +65,7 @@ const AboutPage = async () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Mindfulness
                                 </h3>
-                                <div className="text-sm text-gray-600 leading-relaxed">
+                                <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.aboutPhilosophyMindfulness ? (
                                         <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyMindfulness }} />
                                     ) : (
@@ -80,7 +80,7 @@ const AboutPage = async () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Growth
                                 </h3>
-                                <div className="text-sm text-gray-600 leading-relaxed">
+                                <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.aboutPhilosophyGrowth ? (
                                         <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyGrowth }} />
                                     ) : (
@@ -98,7 +98,7 @@ const AboutPage = async () => {
                         <h2 className="text-3xl font-light text-gray-800 text-center mb-8">
                             My Journey
                         </h2>
-                        <div className="space-y-6 text-gray-600 leading-relaxed">
+                        <div className="prose prose-gray max-w-none">
                             {content?.aboutJourney ? (
                                 <div dangerouslySetInnerHTML={{ __html: content.aboutJourney }} />
                             ) : (

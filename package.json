@@ -12,6 +12,7 @@
     "@aws-amplify/adapter-nextjs": "^1.7.3",
     "@aws-amplify/backend": "^1.22.0",
     "@aws-amplify/ui-react": "^6.15.4",
+    "@tailwindcss/typography": "^0.5.19",
     "@tiptap/extension-image": "^3.23.4",
     "@tiptap/extension-link": "^3.23.4",
     "@tiptap/extension-placeholder": "^3.23.4",

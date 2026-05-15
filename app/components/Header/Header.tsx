@@ -15,8 +15,8 @@ interface HeaderProps {
 const Header = ({
     showHero,
     heroImage = yogaPlaceholderOne,
-    headline = "Find Your Balance",
-    subtitle = "Yoga classes in London with Caterina Giordo",
+    headline = "Caterina Giordo",
+    subtitle = "Yoga | Breathwork | Meditation",
 }: HeaderProps) => {
     return (
         <header className="w-full">
