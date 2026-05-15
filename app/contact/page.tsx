@@ -3,8 +3,15 @@ import Header from "../components/Header/Header"
 import ButtonLink from "../components/ButtonLink/ButtonLink"
 import { HiOutlineMail } from "react-icons/hi"
 import { FaInstagram } from "react-icons/fa"
+import { getPageContent } from "../lib/pages"
 
-const ContactPage = () => {
+const ContactPage = async () => {
+    const content = await getPageContent("contact");
+
+    const email = content?.contactEmail || "cat@caterinagiordo.com";
+    const instagram = content?.contactInstagram || "@catgiordo";
+    const newsletterLink = content?.contactNewsletterLink || "https://mailchi.mp/caterinagiordo/newsletter";
+
     return (
         <>
             <Header showHero={true} />
@@ -15,11 +22,13 @@ const ContactPage = () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-4">
                             Get in Touch
                         </h2>
-                        <p className="text-gray-600 leading-relaxed">
-                            Whether you have a question about classes, want to discuss
-                            private sessions, or just want to say hello — I&apos;d love to
-                            hear from you.
-                        </p>
+                        <div className="text-gray-600 leading-relaxed">
+                            {content?.contactIntro ? (
+                                <div dangerouslySetInnerHTML={{ __html: content.contactIntro }} />
+                            ) : (
+                                <p>Whether you have a question about classes, want to discuss private sessions, or just want to say hello — I'd love to hear from you.</p>
+                            )}
+                        </div>
                     </div>
                 </section>
 
@@ -35,15 +44,18 @@ const ContactPage = () => {
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     Email Me
                                 </h3>
-                                <p className="text-sm text-gray-600">
-                                    Drop me a message and I&apos;ll get back to you as soon
-                                    as I can.
-                                </p>
+                                <div className="text-sm text-gray-600">
+                                    {content?.contactEmailDescription ? (
+                                        <div dangerouslySetInnerHTML={{ __html: content.contactEmailDescription }} />
+                                    ) : (
+                                        <p>Drop me a message and I'll get back to you as soon as I can.</p>
+                                    )}
+                                </div>
                                 <a
-                                    href="mailto:hello@caterinagiordo.com"
+                                    href={`mailto:${email}`}
                                     className="text-sm font-medium text-[#0F4C5C] hover:text-[#45858C] transition-colors"
                                 >
-                                    hello@caterinagiordo.com
+                                    {email}
                                 </a>
                             </div>
 
@@ -55,16 +67,20 @@ const ContactPage = () => {
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     Follow on Instagram
                                 </h3>
-                                <p className="text-sm text-gray-600">
-                                    Class updates, tips, and behind-the-scenes moments.
-                                </p>
+                                <div className="text-sm text-gray-600">
+                                    {content?.contactInstagramDescription ? (
+                                        <div dangerouslySetInnerHTML={{ __html: content.contactInstagramDescription }} />
+                                    ) : (
+                                        <p>Class updates, tips, and behind-the-scenes moments.</p>
+                                    )}
+                                </div>
                                 <a
-                                    href="https://instagram.com/caterinagiordo"
+                                    href={`https://instagram.com/${instagram.replace("@", "")}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-sm font-medium text-[#0F4C5C] hover:text-[#45858C] transition-colors"
                                 >
-                                    @caterinagiordo
+                                    {instagram}
                                 </a>
                             </div>
                         </div>
@@ -77,12 +93,15 @@ const ContactPage = () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-4">
                             Stay Connected
                         </h2>
-                        <p className="text-gray-600 leading-relaxed mb-8">
-                            Subscribe to my newsletter for class schedules, wellness tips,
-                            and exclusive offers delivered straight to your inbox.
-                        </p>
+                        <div className="text-gray-600 leading-relaxed mb-8">
+                            {content?.contactNewsletterText ? (
+                                <div dangerouslySetInnerHTML={{ __html: content.contactNewsletterText }} />
+                            ) : (
+                                <p>Subscribe to my newsletter for class schedules, wellness tips, and exclusive offers delivered straight to your inbox.</p>
+                            )}
+                        </div>
                         <ButtonLink
-                            href="https://mailchimp.com"
+                            href={newsletterLink}
                             label="Subscribe to Newsletter"
                             isExternal={true}
                         />

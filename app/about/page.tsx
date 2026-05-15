@@ -1,7 +1,10 @@
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header"
+import { getPageContent } from "../lib/pages"
 
-const AboutPage = () => {
+const AboutPage = async () => {
+    const content = await getPageContent("about");
+
     return (
         <>
             <Header showHero={true} />
@@ -12,16 +15,24 @@ const AboutPage = () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-6">
                             About Caterina
                         </h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                        </p>
-                        <p className="text-gray-600 leading-relaxed">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt.
-                        </p>
+                        <div className="text-gray-600 leading-relaxed space-y-4">
+                            {content?.aboutIntro ? (
+                                <div dangerouslySetInnerHTML={{ __html: content.aboutIntro }} />
+                            ) : (
+                                <>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                                    </p>
+                                    <p>
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt.
+                                    </p>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </section>
 
@@ -39,10 +50,13 @@ const AboutPage = () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Balance
                                 </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed do eiusmod tempor incididunt.
-                                </p>
+                                <div className="text-sm text-gray-600 leading-relaxed">
+                                    {content?.aboutPhilosophyBalance ? (
+                                        <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyBalance }} />
+                                    ) : (
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                                    )}
+                                </div>
                             </div>
                             <div className="text-center">
                                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#E0F2F1] flex items-center justify-center">
@@ -51,10 +65,13 @@ const AboutPage = () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Mindfulness
                                 </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip.
-                                </p>
+                                <div className="text-sm text-gray-600 leading-relaxed">
+                                    {content?.aboutPhilosophyMindfulness ? (
+                                        <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyMindfulness }} />
+                                    ) : (
+                                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                    )}
+                                </div>
                             </div>
                             <div className="text-center">
                                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#E0F2F1] flex items-center justify-center">
@@ -63,10 +80,13 @@ const AboutPage = () => {
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Growth
                                 </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat.
-                                </p>
+                                <div className="text-sm text-gray-600 leading-relaxed">
+                                    {content?.aboutPhilosophyGrowth ? (
+                                        <div dangerouslySetInnerHTML={{ __html: content.aboutPhilosophyGrowth }} />
+                                    ) : (
+                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,22 +99,28 @@ const AboutPage = () => {
                             My Journey
                         </h2>
                         <div className="space-y-6 text-gray-600 leading-relaxed">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Praesent commodo cursus magna, vel scelerisque nisl
-                                consectetur et. Cras mattis consectetur purus sit amet
-                                fermentum.
-                            </p>
-                            <p>
-                                Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                Maecenas faucibus mollis interdum. Donec ullamcorper nulla
-                                non metus auctor fringilla.
-                            </p>
-                            <p>
-                                Cras justo odio, dapibus ut facilisis in, egestas eget
-                                quam. Morbi leo risus, porta ac consectetur ac, vestibulum
-                                at eros.
-                            </p>
+                            {content?.aboutJourney ? (
+                                <div dangerouslySetInnerHTML={{ __html: content.aboutJourney }} />
+                            ) : (
+                                <>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Praesent commodo cursus magna, vel scelerisque nisl
+                                        consectetur et. Cras mattis consectetur purus sit amet
+                                        fermentum.
+                                    </p>
+                                    <p>
+                                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        Maecenas faucibus mollis interdum. Donec ullamcorper nulla
+                                        non metus auctor fringilla.
+                                    </p>
+                                    <p>
+                                        Cras justo odio, dapibus ut facilisis in, egestas eget
+                                        quam. Morbi leo risus, porta ac consectetur ac, vestibulum
+                                        at eros.
+                                    </p>
+                                </>
+                            )}
                         </div>
                     </div>
                 </section>

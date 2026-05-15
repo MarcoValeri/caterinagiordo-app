@@ -1,4 +1,6 @@
 import { GiLotusFlower } from "react-icons/gi";
+import Image from "next/image";
+import logo from "../../assets/images/caterina-giordo-logo.png";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -15,7 +17,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <a href="/" className="flex items-center gap-2 group">
-              <GiLotusFlower className="text-2xl text-[#0F4C5C] group-hover:text-[#45858C] transition-colors" />
+              <Image
+                src={logo}
+                alt="Caterina Giordo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <span className="text-lg font-semibold text-white">
                 Caterina Giordo
               </span>
@@ -54,10 +62,10 @@ const Footer = () => {
               <li>London, United Kingdom</li>
               <li>
                 <a
-                  href="mailto:hello@caterinagiordo.com"
+                  href="mailto:cat@caterinagiordo.com"
                   className="hover:text-[#45858C] transition-colors"
                 >
-                  hello@caterinagiordo.com
+                  cat@caterinagiordo.com
                 </a>
               </li>
             </ul>
@@ -70,7 +78,7 @@ const Footer = () => {
             Stay up to date with class schedules and wellness tips
           </p>
           <a
-            href="https://mailchimp.com"
+            href="https://mailchi.mp/caterinagiordo/newsletter"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] hover:shadow-lg hover:shadow-[#0F4C5C]/20 transition-all duration-300"
