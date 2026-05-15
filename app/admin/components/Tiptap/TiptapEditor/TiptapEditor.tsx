@@ -7,11 +7,6 @@ import Image from '@tiptap/extension-image';
 import Toolbar from '../Toolbar/Toolbar';
 import ImagePicker from '../ImagePicker/ImagePicker';
 import { useEffect, useState } from 'react';
-import { generateClient } from 'aws-amplify/data';
-import { getUrl } from 'aws-amplify/storage';
-import type { Schema } from '@/amplify/data/resource';
-
-const client = generateClient<Schema>();
 
 type Props = {
   content: string;
@@ -61,30 +56,10 @@ const TiptapEditor = ({ content, onChange, placeholder }: Props) => {
     }
   }, [content, editor]);
 
-  // Function to load images from Amplify when picker opens
+  // Function to load images when picker opens
   const handleOpenImagePicker = async () => {
-    try {
-        // 1. Fetch Image records
-        const { data } = await client.models.Image.list();
-        
-        // 2. Generate signed URLs for all of them
-        const imagesWithUrls = await Promise.all(data.map(async (img) => {
-            if (!img.url) return null;
-            try {
-                const urlResult = await getUrl({ path: img.url });
-                return { 
-                    id: img.id, 
-                    name: img.name, 
-                    url: urlResult.url.toString() 
-                };
-            } catch (e) { return null; }
-        }));
-        
-        setAvailableImages(imagesWithUrls.filter(Boolean));
-        setShowImagePicker(true);
-    } catch (error) {
-        console.error("Error loading images", error);
-    }
+    // Image model not available in this project
+    setShowImagePicker(false);
   };
 
   const handleInsertImage = (image: any) => {
