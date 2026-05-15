@@ -13,8 +13,8 @@ const HomePage = async () => {
       <Header
         showHero={true}
         heroImage={yogaPlaceholder}
-        headline="Find Your Balance"
-        subtitle="Yoga classes in London with Caterina Giordo"
+        headline="Caterina Giordo"
+        subtitle="Yoga | Breathwork | Meditation"
         ctaText="Book a Class"
         ctaHref="/book"
       />
