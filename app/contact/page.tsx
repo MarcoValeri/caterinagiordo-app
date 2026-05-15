@@ -22,7 +22,7 @@ const ContactPage = async () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-4">
                             Get in Touch
                         </h2>
-                        <div className="text-gray-600 leading-relaxed">
+                        <div className="prose prose-gray max-w-none">
                             {content?.contactIntro ? (
                                 <div dangerouslySetInnerHTML={{ __html: content.contactIntro }} />
                             ) : (
@@ -44,7 +44,7 @@ const ContactPage = async () => {
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     Email Me
                                 </h3>
-                                <div className="text-sm text-gray-600">
+                                <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.contactEmailDescription ? (
                                         <div dangerouslySetInnerHTML={{ __html: content.contactEmailDescription }} />
                                     ) : (
@@ -65,9 +65,9 @@ const ContactPage = async () => {
                                     <FaInstagram className="text-2xl text-[#0F4C5C]" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800">
-                                    Follow on Instagram
+                                    Follow Me On Instagram
                                 </h3>
-                                <div className="text-sm text-gray-600">
+                                <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.contactInstagramDescription ? (
                                         <div dangerouslySetInnerHTML={{ __html: content.contactInstagramDescription }} />
                                     ) : (
@@ -93,7 +93,7 @@ const ContactPage = async () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-4">
                             Stay Connected
                         </h2>
-                        <div className="text-gray-600 leading-relaxed mb-8">
+                        <div className="prose prose-gray max-w-none mb-8">
                             {content?.contactNewsletterText ? (
                                 <div dangerouslySetInnerHTML={{ __html: content.contactNewsletterText }} />
                             ) : (
@@ -102,7 +102,7 @@ const ContactPage = async () => {
                         </div>
                         <ButtonLink
                             href={newsletterLink}
-                            label="Subscribe to Newsletter"
+                            label="Subscribe to my Newsletter"
                             isExternal={true}
                         />
                     </div>
