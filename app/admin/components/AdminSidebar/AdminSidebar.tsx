@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MdDashboard, MdMenu, MdClose, MdArrowOutward, MdEvent } from "react-icons/md";
+import { MdDashboard, MdMenu, MdClose, MdArrowOutward, MdEvent, MdArticle } from "react-icons/md";
 import AdminMenu from "../AdminMenu/AdminMenu";
 
 const AdminSidebar = () => {
@@ -51,6 +51,13 @@ const AdminSidebar = () => {
               pathName="/admin/classes"
               label="Classes"
               icon={MdEvent}
+            />
+          </div>
+          <div className="mb-5">
+            <AdminMenu
+              pathName="/admin/pages"
+              label="Pages"
+              icon={MdArticle}
             />
           </div>
           <div className="mb-5">

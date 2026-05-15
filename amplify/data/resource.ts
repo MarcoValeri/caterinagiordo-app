@@ -17,6 +17,29 @@ const schema = a.schema({
       allow.authenticated(),
       allow.guest().to(["read"]),
     ]),
+
+  PageContent: a
+    .model({
+      slug: a.string().required(),
+      // About page fields
+      aboutIntro: a.string(),
+      aboutPhilosophyBalance: a.string(),
+      aboutPhilosophyMindfulness: a.string(),
+      aboutPhilosophyGrowth: a.string(),
+      aboutJourney: a.string(),
+      // Contact page fields
+      contactIntro: a.string(),
+      contactEmail: a.string(),
+      contactEmailDescription: a.string(),
+      contactInstagram: a.string(),
+      contactInstagramDescription: a.string(),
+      contactNewsletterText: a.string(),
+      contactNewsletterLink: a.string(),
+    })
+    .authorization((allow) => [
+      allow.authenticated(),
+      allow.guest().to(["read"]),
+    ]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

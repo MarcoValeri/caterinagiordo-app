@@ -1,4 +1,6 @@
 import { GiLotusFlower } from "react-icons/gi";
+import Image from "next/image";
+import logo from "../../assets/images/caterina-giordo-logo.png";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -15,7 +17,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <a href="/" className="flex items-center gap-2 group">
-              <GiLotusFlower className="text-2xl text-[#0F4C5C] group-hover:text-[#45858C] transition-colors" />
+              <Image
+                src={logo}
+                alt="Caterina Giordo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <span className="text-lg font-semibold text-white">
                 Caterina Giordo
               </span>

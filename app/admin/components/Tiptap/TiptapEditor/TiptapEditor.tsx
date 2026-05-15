@@ -3,7 +3,6 @@
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
-import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import Toolbar from '../Toolbar/Toolbar';
 import ImagePicker from '../ImagePicker/ImagePicker';
@@ -26,16 +25,17 @@ const TiptapEditor = ({ content, onChange, placeholder }: Props) => {
 
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({
+        link: {
+          openOnClick: false,
+          HTMLAttributes: {
+            class: 'text-blue-600 underline cursor-pointer',
+          },
+        },
+      }),
       Placeholder.configure({
         placeholder: placeholder || 'Start writing...',
         emptyEditorClass: 'is-editor-empty before:content-[attr(data-placeholder)] before:text-gray-400 before:absolute before:pointer-events-none',
-      }),
-      Link.configure({
-        openOnClick: false, // Don't open links while editing
-        HTMLAttributes: {
-          class: 'text-blue-600 underline cursor-pointer',
-        },
       }),
       Image.configure({
         HTMLAttributes: {
