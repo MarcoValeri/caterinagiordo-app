@@ -43,8 +43,8 @@ const Nav = () => {
               href={link.href}
               className={`text-sm font-medium transition-colors ${
                 isActive
-                  ? "text-rose-500 border-b-2 border-rose-400 pb-0.5"
-                  : "text-gray-600 hover:text-rose-500"
+                  ? "text-[#45858C] border-b-2 border-[#0F4C5C] pb-0.5"
+                  : "text-gray-600 hover:text-[#45858C]"
               }`}
             >
               {link.label}
@@ -55,8 +55,8 @@ const Nav = () => {
           href="/classes"
           className={`ml-2 px-4 py-2 text-sm font-medium rounded-full transition-colors ${
             pathname === "/classes"
-              ? "text-rose-500 bg-rose-100"
-              : "text-white bg-rose-400 hover:bg-rose-500"
+              ? "text-[#0F4C5C] bg-[#E0F2F1]"
+              : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
           }`}
         >
           Classes
@@ -65,7 +65,7 @@ const Nav = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden p-2 text-gray-600 hover:text-rose-500 transition-colors cursor-pointer"
+        className="md:hidden p-2 text-gray-600 hover:text-[#45858C] transition-colors cursor-pointer"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
       >
@@ -91,8 +91,8 @@ const Nav = () => {
                 href={link.href}
                 className={`block text-sm font-medium transition-colors ${
                   isActive
-                    ? "text-rose-500"
-                    : "text-gray-600 hover:text-rose-500"
+                    ? "text-[#45858C]"
+                    : "text-gray-600 hover:text-[#45858C]"
                 }`}
               >
                 {link.label}
@@ -103,8 +103,8 @@ const Nav = () => {
             href="/classes"
             className={`block mt-3 text-center px-4 py-2 text-sm font-medium rounded-full transition-colors ${
               pathname === "/classes"
-                ? "text-rose-500 bg-rose-100"
-                : "text-white bg-rose-400 hover:bg-rose-500"
+                ? "text-[#0F4C5C] bg-[#E0F2F1]"
+                : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
             }`}
           >
             Classes

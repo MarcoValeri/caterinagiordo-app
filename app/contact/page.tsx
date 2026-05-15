@@ -29,8 +29,8 @@ const ContactPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Email */}
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center flex flex-col items-center gap-4">
-                                <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center">
-                                    <HiOutlineMail className="text-2xl text-rose-400" />
+                                <div className="w-14 h-14 rounded-full bg-[#E0F2F1] flex items-center justify-center">
+                                    <HiOutlineMail className="text-2xl text-[#0F4C5C]" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     Email Me
@@ -41,7 +41,7 @@ const ContactPage = () => {
                                 </p>
                                 <a
                                     href="mailto:hello@caterinagiordo.com"
-                                    className="text-sm font-medium text-rose-400 hover:text-rose-500 transition-colors"
+                                    className="text-sm font-medium text-[#0F4C5C] hover:text-[#45858C] transition-colors"
                                 >
                                     hello@caterinagiordo.com
                                 </a>
@@ -49,8 +49,8 @@ const ContactPage = () => {
 
                             {/* Instagram */}
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center flex flex-col items-center gap-4">
-                                <div className="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center">
-                                    <FaInstagram className="text-2xl text-rose-400" />
+                                <div className="w-14 h-14 rounded-full bg-[#E0F2F1] flex items-center justify-center">
+                                    <FaInstagram className="text-2xl text-[#0F4C5C]" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     Follow on Instagram
@@ -62,7 +62,7 @@ const ContactPage = () => {
                                     href="https://instagram.com/caterinagiordo"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm font-medium text-rose-400 hover:text-rose-500 transition-colors"
+                                    className="text-sm font-medium text-[#0F4C5C] hover:text-[#45858C] transition-colors"
                                 >
                                     @caterinagiordo
                                 </a>

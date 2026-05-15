@@ -3,19 +3,27 @@
 /*
  * Color Palette
  * =============
- * Primary (Rose accent):
- *   rose-400: #fb7185
- *   rose-500: #f43f5e (hover)
+ * Primary (Teal):
+ *   #0F4C5C (main / Dark green)
+ *   #45858C (hover / Light green)
+ *   #E0F2F1 (light background tint)
+ *   #B2DFDB (shadow glow)
+ *
+ * Accent:
+ *   #8D1F85 (Purple)
+ *   #F25C93 (Pink)
  *
  * Text:
  *   gray-800: #1f2937 (headings)
  *   gray-600: #4b5563 (body)
  *   gray-500: #6b7280 (faint)
  *   gray-400: #9ca3af (muted)
+ *   #F2F2F2 (light text on dark backgrounds)
  *
  * Backgrounds:
  *   white: #ffffff (light)
  *   gray-900: #111827 (dark/footer)
+ *   #F2E6D8 (Light beige)
  *
  * Borders:
  *   gray-100: #f3f4f6 (light)
@@ -27,14 +35,14 @@
  *
  * Overlay:
  *   black/40: rgba(0, 0, 0, 0.4)
-
-  Dark green: R15 G76 B92 - #0F4C5C
-  Light Green: R69 G133 B140 - #45858C
-  Purple: R141 G31 B133 #8D1F85
-  Light beige: R242 G230 B216  #F2E6D8
-  Text Darker white: R242 G242 B242  #F2F2F2
-  Pink: R242 G92 B147  #F25C93
-
+ *
+ * Client Brand Colors:
+ *   Dark green: R15 G76 B92 - #0F4C5C
+ *   Light Green: R69 G133 B140 - #45858C
+ *   Purple: R141 G31 B133 - #8D1F85
+ *   Light beige: R242 G230 B216 - #F2E6D8
+ *   Text Darker white: R242 G242 B242 - #F2F2F2
+ *   Pink: R242 G92 B147 - #F25C93
  */
 
 body {

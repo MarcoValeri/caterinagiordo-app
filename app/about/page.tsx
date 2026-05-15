@@ -33,8 +33,8 @@ const AboutPage = () => {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center">
-                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-rose-100 flex items-center justify-center">
-                                    <span className="text-rose-400 text-2xl">🧘</span>
+                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#E0F2F1] flex items-center justify-center">
+                                    <span className="text-[#0F4C5C] text-2xl">🧘</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Balance
@@ -45,8 +45,8 @@ const AboutPage = () => {
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-rose-100 flex items-center justify-center">
-                                    <span className="text-rose-400 text-2xl">🌿</span>
+                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#E0F2F1] flex items-center justify-center">
+                                    <span className="text-[#0F4C5C] text-2xl">🌿</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Mindfulness
@@ -57,8 +57,8 @@ const AboutPage = () => {
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-rose-100 flex items-center justify-center">
-                                    <span className="text-rose-400 text-2xl">✨</span>
+                                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#E0F2F1] flex items-center justify-center">
+                                    <span className="text-[#0F4C5C] text-2xl">✨</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                     Growth

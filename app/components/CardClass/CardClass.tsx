@@ -57,21 +57,21 @@ const CardClass = ({
 
             {/* Date & Time */}
             <div className="flex items-center gap-2 text-sm text-gray-500">
-                <HiOutlineClock className="text-base text-rose-400" />
+                <HiOutlineClock className="text-base text-[#0F4C5C]" />
                 <span>{dateTime}</span>
             </div>
 
             {/* Address (if in-person) */}
             {address && (
                 <div className="flex items-start gap-2 text-sm text-gray-500">
-                    <HiOutlineLocationMarker className="text-base text-rose-400 mt-0.5" />
+                    <HiOutlineLocationMarker className="text-base text-[#0F4C5C] mt-0.5" />
                     <span>
                         {map ? (
                             <a
                                 href={map}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-rose-500 underline underline-offset-2 transition-colors"
+                                className="hover:text-[#45858C] underline underline-offset-2 transition-colors"
                             >
                                 {address}
                             </a>
@@ -89,14 +89,14 @@ const CardClass = ({
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] transition-colors"
                     >
                         Book this class
                     </a>
                 ) : (
                     <Link
                         href={link}
-                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-rose-400 rounded-full hover:bg-rose-500 transition-colors"
+                        className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] transition-colors"
                     >
                         Book this class
                     </Link>
