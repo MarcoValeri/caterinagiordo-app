@@ -18,9 +18,9 @@ export interface YogaClassData {
 }
 
 /**
- * Fetch all published yoga classes
+ * Fetch all published yoga classes (upcoming only, sorted by next class first)
  * @param limit - Optional limit for number of classes to fetch
- * @returns Array of published classes sorted by dateTime
+ * @returns Array of published upcoming classes sorted by dateTime ascending
  */
 export async function getClasses(limit?: number): Promise<YogaClassData[]> {
   try {
@@ -42,13 +42,16 @@ export async function getClasses(limit?: number): Promise<YogaClassData[]> {
       ],
     });
 
-    const sortedClasses = (data as YogaClassData[]).sort((a, b) => {
-      const dateA = new Date(a.createdAt || 0).getTime();
-      const dateB = new Date(b.createdAt || 0).getTime();
-      return dateB - dateA;
-    });
+    const now = new Date().toISOString();
 
-    return limit ? sortedClasses.slice(0, limit) : sortedClasses;
+    // Filter out past classes and sort by dateTime ascending (next class first)
+    const upcomingClasses = (data as YogaClassData[])
+      .filter((c) => c.dateTime >= now)
+      .sort((a, b) => {
+        return new Date(a.dateTime).getTime() - new Date(b.dateTime).getTime();
+      });
+
+    return limit ? upcomingClasses.slice(0, limit) : upcomingClasses;
   } catch (error) {
     console.error("Error fetching classes:", error);
     return [];
