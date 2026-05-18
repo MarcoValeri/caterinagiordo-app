@@ -7,6 +7,18 @@ interface SectionClassesProps {
   showViewAll?: boolean;
 }
 
+const formatDateTime = (isoString: string): string => {
+  const date = new Date(isoString);
+  return date.toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+};
+
 const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) => {
   return (
     <section className="w-full py-16 bg-gray-50">
@@ -21,7 +33,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
                 key={classItem.id}
                 title={classItem.title}
                 description={classItem.description}
-                dateTime={classItem.dateTime}
+                dateTime={formatDateTime(classItem.dateTime)}
                 linkType={
                   classItem.linkType === "INTERNAL"
                     ? LinkType.Internal
@@ -35,6 +47,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
                     ? ClassType.OnLine
                     : ClassType.InPerson
                 }
+                ctaText={classItem.ctaText || undefined}
               />
             ))}
           </div>
