@@ -26,6 +26,7 @@ interface YogaClass {
   map?: string | null;
   classType?: "ONLINE" | "IN_PERSON" | null;
   published: boolean;
+  ctaText?: string | null;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -51,6 +52,7 @@ const AdminClassesPage = () => {
     map: "",
     classType: "IN_PERSON" as "ONLINE" | "IN_PERSON",
     published: false,
+    ctaText: "",
   });
 
   useEffect(() => {
@@ -103,6 +105,7 @@ const AdminClassesPage = () => {
       map: formData.map || null,
       classType: formData.classType,
       published: formData.published,
+      ctaText: formData.ctaText || null,
     };
 
     try {
@@ -152,6 +155,7 @@ const AdminClassesPage = () => {
         map: yogaClass.map || "",
         classType: yogaClass.classType || "IN_PERSON",
         published: yogaClass.published,
+        ctaText: yogaClass.ctaText || "",
       });
     } else {
       setEditingClass(null);
@@ -165,6 +169,7 @@ const AdminClassesPage = () => {
         map: "",
         classType: "IN_PERSON",
         published: false,
+        ctaText: "",
       });
     }
     setShowForm(true);
@@ -184,6 +189,7 @@ const AdminClassesPage = () => {
       map: "",
       classType: "IN_PERSON",
       published: false,
+      ctaText: "",
     });
   };
 
@@ -318,19 +324,26 @@ const AdminClassesPage = () => {
                 </div>
 
                 <div className="mb-4">
-                  <AdminInputText
+                  <label htmlFor="dateTime" className="block text-sm font-medium text-gray-700 mb-2">
+                    Date & Time <span className="text-red-500">*</span>
+                  </label>
+                  <input
                     id="dateTime"
-                    name="dateTime"
-                    label="Date & Time"
+                    type="datetime-local"
                     value={formData.dateTime}
                     onChange={(e) =>
                       setFormData({ ...formData, dateTime: e.target.value })
                     }
-                    error={!!errors.dateTime}
-                    errorMessage={errors.dateTime}
-                    placeholder="e.g. Monday, 7:00 AM – 8:00 AM"
                     required
+                    className={`w-full py-2 px-4 rounded-[10px] border outline-none transition-colors focus:ring-2 focus:ring-offset-1 ${
+                      errors.dateTime
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+                        : "border-[#171C32] focus:border-[#171C32] focus:ring-blue-200 hover:border-gray-400"
+                    }`}
                   />
+                  {errors.dateTime && (
+                    <span className="text-sm text-red-500">{errors.dateTime}</span>
+                  )}
                 </div>
 
                 <div className="mb-4">
@@ -410,6 +423,19 @@ const AdminClassesPage = () => {
                       setFormData({ ...formData, map: e.target.value })
                     }
                     placeholder="e.g. https://maps.google.com/..."
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <AdminInputText
+                    id="ctaText"
+                    name="ctaText"
+                    label="CTA Button Text (optional)"
+                    value={formData.ctaText}
+                    onChange={(e) =>
+                      setFormData({ ...formData, ctaText: e.target.value })
+                    }
+                    placeholder="e.g. Book this class, Join now, Register here"
                   />
                 </div>
 

@@ -65,7 +65,7 @@ const ContactPage = async () => {
                                     <FaInstagram className="text-2xl text-[#0F4C5C]" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800">
-                                    Follow Me On Instagram
+                                    Follow me on Instagram
                                 </h3>
                                 <div className="prose prose-sm prose-gray max-w-none">
                                     {content?.contactInstagramDescription ? (
