@@ -20,6 +20,7 @@ interface CardClassProps {
     address?: string;
     map?: string;
     type?: ClassType;
+    ctaText?: string;
 }
 
 const CardClass = ({
@@ -31,6 +32,7 @@ const CardClass = ({
     address,
     map,
     type,
+    ctaText,
 }: CardClassProps) => {
     const isExternal = linkType === LinkType.External;
 
@@ -91,14 +93,14 @@ const CardClass = ({
                         rel="noopener noreferrer"
                         className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] transition-colors"
                     >
-                        Book this class
+                        {ctaText || "Book this class"}
                     </a>
                 ) : (
                     <Link
                         href={link}
                         className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-[#0F4C5C] rounded-full hover:bg-[#45858C] transition-colors"
                     >
-                        Book this class
+                        {ctaText || "Book this class"}
                     </Link>
                 )}
             </div>

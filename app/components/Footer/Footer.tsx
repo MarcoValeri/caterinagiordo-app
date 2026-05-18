@@ -29,8 +29,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-sm text-gray-400 max-w-xs">
-              Yoga classes in London. Find your balance, build strength, and
-              nurture your wellbeing.
+              Yoga teacher in London.
             </p>
           </div>
 

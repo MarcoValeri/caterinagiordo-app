@@ -12,6 +12,7 @@ const schema = a.schema({
       map: a.string(),
       classType: a.enum(["ONLINE", "IN_PERSON"]),
       published: a.boolean().default(false),
+      ctaText: a.string(),
     })
     .authorization((allow) => [
       allow.authenticated(),

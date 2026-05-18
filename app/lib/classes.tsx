@@ -13,6 +13,7 @@ export interface YogaClassData {
   map?: string | null;
   classType?: "ONLINE" | "IN_PERSON" | null;
   published: boolean;
+  ctaText?: string | null;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -37,6 +38,7 @@ export async function getClasses(limit?: number): Promise<YogaClassData[]> {
         "map",
         "classType",
         "published",
+        "ctaText",
         "createdAt",
         "updatedAt",
       ],

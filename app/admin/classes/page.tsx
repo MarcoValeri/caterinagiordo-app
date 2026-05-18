@@ -26,6 +26,7 @@ interface YogaClass {
   map?: string | null;
   classType?: "ONLINE" | "IN_PERSON" | null;
   published: boolean;
+  ctaText?: string | null;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -51,6 +52,7 @@ const AdminClassesPage = () => {
     map: "",
     classType: "IN_PERSON" as "ONLINE" | "IN_PERSON",
     published: false,
+    ctaText: "",
   });
 
   useEffect(() => {
@@ -103,6 +105,7 @@ const AdminClassesPage = () => {
       map: formData.map || null,
       classType: formData.classType,
       published: formData.published,
+      ctaText: formData.ctaText || null,
     };
 
     try {
@@ -152,6 +155,7 @@ const AdminClassesPage = () => {
         map: yogaClass.map || "",
         classType: yogaClass.classType || "IN_PERSON",
         published: yogaClass.published,
+        ctaText: yogaClass.ctaText || "",
       });
     } else {
       setEditingClass(null);
@@ -165,6 +169,7 @@ const AdminClassesPage = () => {
         map: "",
         classType: "IN_PERSON",
         published: false,
+        ctaText: "",
       });
     }
     setShowForm(true);
@@ -184,6 +189,7 @@ const AdminClassesPage = () => {
       map: "",
       classType: "IN_PERSON",
       published: false,
+      ctaText: "",
     });
   };
 
@@ -417,6 +423,19 @@ const AdminClassesPage = () => {
                       setFormData({ ...formData, map: e.target.value })
                     }
                     placeholder="e.g. https://maps.google.com/..."
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <AdminInputText
+                    id="ctaText"
+                    name="ctaText"
+                    label="CTA Button Text (optional)"
+                    value={formData.ctaText}
+                    onChange={(e) =>
+                      setFormData({ ...formData, ctaText: e.target.value })
+                    }
+                    placeholder="e.g. Book this class, Join now, Register here"
                   />
                 </div>
 

@@ -47,6 +47,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
                     ? ClassType.OnLine
                     : ClassType.InPerson
                 }
+                ctaText={classItem.ctaText || undefined}
               />
             ))}
           </div>
