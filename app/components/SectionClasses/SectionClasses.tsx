@@ -59,7 +59,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
         )}
         {showViewAll && classes.length > 0 && (
           <div className="mt-10 text-center">
-            <ButtonLink href="/schedule" label="View all schedule" />
+            <ButtonLink href="/schedule" label="View full schedule" />
           </div>
         )}
       </div>
