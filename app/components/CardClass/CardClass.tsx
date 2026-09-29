@@ -11,6 +11,15 @@ enum ClassType {
     InPerson,
 }
 
+type ScheduleType = "CLASS" | "COURSE" | "EVENT" | "WORKSHOP";
+
+const scheduleTypeLabels: Record<ScheduleType, string> = {
+    CLASS: "Class",
+    COURSE: "Course",
+    EVENT: "Event",
+    WORKSHOP: "Workshop",
+};
+
 interface CardClassProps {
     title: string;
     description: string;
@@ -20,6 +29,7 @@ interface CardClassProps {
     address?: string;
     map?: string;
     type?: ClassType;
+    scheduleType?: ScheduleType | null;
     ctaText?: string;
 }
 
@@ -32,26 +42,34 @@ const CardClass = ({
     address,
     map,
     type,
+    scheduleType,
     ctaText,
 }: CardClassProps) => {
     const isExternal = linkType === LinkType.External;
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-            {/* Header: Title + Badge */}
+            {/* Header: Title + Badges */}
             <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-                {type !== undefined && (
-                    <span
-                        className={`shrink-0 text-xs font-medium px-3 py-1 rounded-full ${
-                            type === ClassType.OnLine
-                                ? "bg-sky-100 text-sky-700"
-                                : "bg-amber-100 text-amber-700"
-                        }`}
-                    >
-                        {type === ClassType.OnLine ? "Online" : "In Person"}
-                    </span>
-                )}
+                <div className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
+                    {scheduleType && (
+                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#E0F2F1] text-[#0F4C5C]">
+                            {scheduleTypeLabels[scheduleType]}
+                        </span>
+                    )}
+                    {type !== undefined && (
+                        <span
+                            className={`text-xs font-medium px-3 py-1 rounded-full ${
+                                type === ClassType.OnLine
+                                    ? "bg-sky-100 text-sky-700"
+                                    : "bg-amber-100 text-amber-700"
+                            }`}
+                        >
+                            {type === ClassType.OnLine ? "Online" : "In Person"}
+                        </span>
+                    )}
+                </div>
             </div>
 
             {/* Description */}
@@ -108,6 +126,6 @@ const CardClass = ({
     );
 };
 
-export { LinkType, ClassType };
-export type { CardClassProps };
+export { LinkType, ClassType, scheduleTypeLabels };
+export type { CardClassProps, ScheduleType };
 export default CardClass;

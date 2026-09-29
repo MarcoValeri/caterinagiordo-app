@@ -1,7 +1,7 @@
 "use client";
 
 import "@/app/utils/configureAmplify";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
 import AdminLayout from "../components/AdminLayout/AdminLayout";
@@ -25,13 +25,24 @@ interface YogaClass {
   address?: string | null;
   map?: string | null;
   classType?: "ONLINE" | "IN_PERSON" | null;
+  scheduleType?: "CLASS" | "COURSE" | "EVENT" | "WORKSHOP" | null;
   published: boolean;
   ctaText?: string | null;
   createdAt?: string;
   updatedAt?: string;
 }
 
-const AdminClassesPage = () => {
+const SCHEDULE_TYPE_OPTIONS = [
+  { value: "CLASS", label: "Class" },
+  { value: "COURSE", label: "Course" },
+  { value: "EVENT", label: "Event" },
+  { value: "WORKSHOP", label: "Workshop" },
+];
+
+const scheduleTypeLabel = (value?: string | null) =>
+  SCHEDULE_TYPE_OPTIONS.find((o) => o.value === value)?.label ?? "—";
+
+const AdminSchedulePage = () => {
   const [classes, setClasses] = useState<YogaClass[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingClass, setEditingClass] = useState<YogaClass | null>(null);
@@ -51,13 +62,10 @@ const AdminClassesPage = () => {
     address: "",
     map: "",
     classType: "IN_PERSON" as "ONLINE" | "IN_PERSON",
+    scheduleType: "CLASS" as "CLASS" | "COURSE" | "EVENT" | "WORKSHOP",
     published: false,
     ctaText: "",
   });
-
-  useEffect(() => {
-    fetchClasses();
-  }, []);
 
   const showNotification = (type: "success" | "error", message: string) => {
     setNotification({ type, message });
@@ -75,7 +83,7 @@ const AdminClassesPage = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const fetchClasses = async () => {
+  const fetchClasses = useCallback(async () => {
     try {
       const { data } = await client.models.YogaClass.list();
       const sortedData = (data as unknown as YogaClass[]).sort((a, b) => {
@@ -87,7 +95,11 @@ const AdminClassesPage = () => {
     } catch (error) {
       console.error("Error fetching classes:", error);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchClasses();
+  }, [fetchClasses]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -104,6 +116,7 @@ const AdminClassesPage = () => {
       address: formData.address || null,
       map: formData.map || null,
       classType: formData.classType,
+      scheduleType: formData.scheduleType,
       published: formData.published,
       ctaText: formData.ctaText || null,
     };
@@ -114,30 +127,30 @@ const AdminClassesPage = () => {
           id: editingClass.id,
           ...classData,
         });
-        showNotification("success", "Class updated successfully!");
+        showNotification("success", "Schedule item updated successfully!");
       } else {
         await client.models.YogaClass.create(classData);
-        showNotification("success", "Class created successfully!");
+        showNotification("success", "Schedule item created successfully!");
       }
       fetchClasses();
       closeForm();
     } catch (error) {
       console.error("Error saving class:", error);
-      showNotification("error", "Error saving class. Please try again.");
+      showNotification("error", "Error saving schedule item. Please try again.");
     } finally {
       setIsSaving(false);
     }
   };
 
   const handleDelete = async (id: string) => {
-    if (confirm("Are you sure you want to delete this class?")) {
+    if (confirm("Are you sure you want to delete this schedule item?")) {
       try {
         await client.models.YogaClass.delete({ id });
         fetchClasses();
-        showNotification("success", "Class deleted successfully!");
+        showNotification("success", "Schedule item deleted successfully!");
       } catch (error) {
-        console.error("Error deleting class:", error);
-        showNotification("error", "Error deleting class.");
+        console.error("Error deleting schedule item:", error);
+        showNotification("error", "Error deleting schedule item.");
       }
     }
   };
@@ -154,6 +167,7 @@ const AdminClassesPage = () => {
         address: yogaClass.address || "",
         map: yogaClass.map || "",
         classType: yogaClass.classType || "IN_PERSON",
+        scheduleType: yogaClass.scheduleType || "CLASS",
         published: yogaClass.published,
         ctaText: yogaClass.ctaText || "",
       });
@@ -168,6 +182,7 @@ const AdminClassesPage = () => {
         address: "",
         map: "",
         classType: "IN_PERSON",
+        scheduleType: "CLASS",
         published: false,
         ctaText: "",
       });
@@ -188,6 +203,7 @@ const AdminClassesPage = () => {
       address: "",
       map: "",
       classType: "IN_PERSON",
+      scheduleType: "CLASS",
       published: false,
       ctaText: "",
     });
@@ -214,8 +230,18 @@ const AdminClassesPage = () => {
       className: "px-6 py-4 whitespace-nowrap text-sm text-gray-900",
     },
     {
+      key: "scheduleType",
+      label: "Schedule Type",
+      render: (item: YogaClass) => (
+        <span className="px-2 py-1 text-xs rounded-full bg-[#E0F2F1] text-[#0F4C5C]">
+          {scheduleTypeLabel(item.scheduleType)}
+        </span>
+      ),
+      className: "px-6 py-4 whitespace-nowrap",
+    },
+    {
       key: "classType",
-      label: "Type",
+      label: "Format",
       render: (item: YogaClass) => (
         <span
           className={`px-2 py-1 text-xs rounded-full ${
@@ -274,10 +300,10 @@ const AdminClassesPage = () => {
 
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">Class Management</h2>
+          <h2 className="text-2xl font-bold">Schedule Management</h2>
           <AdminButtonSubmit
             onClick={() => openForm()}
-            content="Add Class"
+            content="Add Item"
             type="button"
           />
         </div>
@@ -286,7 +312,7 @@ const AdminClassesPage = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
               <h3 className="text-lg font-bold mb-4">
-                {editingClass ? "Edit Class" : "Add New Class"}
+                {editingClass ? "Edit Item" : "Add New Item"}
               </h3>
 
               <form onSubmit={handleSubmit}>
@@ -344,6 +370,26 @@ const AdminClassesPage = () => {
                   {errors.dateTime && (
                     <span className="text-sm text-red-500">{errors.dateTime}</span>
                   )}
+                </div>
+
+                <div className="mb-4">
+                  <AdminInputSelect
+                    id="scheduleType"
+                    name="scheduleType"
+                    label="Schedule Type"
+                    value={formData.scheduleType}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        scheduleType: e.target.value as
+                          | "CLASS"
+                          | "COURSE"
+                          | "EVENT"
+                          | "WORKSHOP",
+                      })
+                    }
+                    options={SCHEDULE_TYPE_OPTIONS}
+                  />
                 </div>
 
                 <div className="mb-4">
@@ -478,7 +524,7 @@ const AdminClassesPage = () => {
           columns={columns}
           searchFields={["title", "description"]}
           searchPlaceholder="Search by title or description..."
-          itemName="classes"
+          itemName="schedule items"
           onEdit={openForm}
           onDelete={(item) => handleDelete(item.id)}
           getItemId={(item) => item.id}
@@ -488,4 +534,4 @@ const AdminClassesPage = () => {
   );
 };
 
-export default AdminClassesPage;
+export default AdminSchedulePage;

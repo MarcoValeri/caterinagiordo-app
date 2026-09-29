@@ -52,14 +52,14 @@ const Nav = () => {
           );
         })}
         <Link
-          href="/classes"
+          href="/schedule"
           className={`ml-2 px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-            pathname === "/classes"
+            pathname === "/schedule"
               ? "text-[#0F4C5C] bg-[#E0F2F1]"
               : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
           }`}
         >
-          Classes
+          Schedule
         </Link>
       </nav>
 
@@ -100,14 +100,14 @@ const Nav = () => {
             );
           })}
           <Link
-            href="/classes"
+            href="/schedule"
             className={`block mt-3 text-center px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-              pathname === "/classes"
+              pathname === "/schedule"
                 ? "text-[#0F4C5C] bg-[#E0F2F1]"
                 : "text-white bg-[#0F4C5C] hover:bg-[#45858C]"
             }`}
           >
-            Classes
+            Schedule
           </Link>
         </div>
       </nav>

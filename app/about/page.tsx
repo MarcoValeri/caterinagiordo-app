@@ -93,7 +93,7 @@ const AboutPage = async () => {
                 </section>
 
                 {/* Qualifications / Journey */}
-                <section className="w-full py-16">
+                {/* <section className="w-full py-16">
                     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-3xl font-light text-gray-800 text-center mb-8">
                             My Journey
@@ -123,7 +123,7 @@ const AboutPage = async () => {
                             )}
                         </div>
                     </div>
-                </section>
+                </section> */}
             </main>
             <Footer />
         </>

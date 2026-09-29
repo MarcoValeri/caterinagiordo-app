@@ -11,6 +11,7 @@ const schema = a.schema({
       address: a.string(),
       map: a.string(),
       classType: a.enum(["ONLINE", "IN_PERSON"]),
+      scheduleType: a.enum(["CLASS", "COURSE", "EVENT", "WORKSHOP"]),
       published: a.boolean().default(false),
       ctaText: a.string(),
     })
