@@ -24,7 +24,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
     <section className="w-full py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-light text-gray-800 text-center mb-12">
-          Upcoming Classes
+          Schedule
         </h2>
         {classes.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,7 +53,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
           </div>
         ) : (
           <p className="text-center text-gray-500">
-            No classes available at the moment. Check back soon!
+            No schedules available at the moment. Check back soon!
           </p>
         )}
         {showViewAll && classes.length > 0 && (
