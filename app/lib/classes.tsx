@@ -12,6 +12,7 @@ export interface YogaClassData {
   address?: string | null;
   map?: string | null;
   classType?: "ONLINE" | "IN_PERSON" | null;
+  scheduleType?: "CLASS" | "COURSE" | "EVENT" | "WORKSHOP" | null;
   published: boolean;
   ctaText?: string | null;
   createdAt?: string;
@@ -37,6 +38,7 @@ export async function getClasses(limit?: number): Promise<YogaClassData[]> {
         "address",
         "map",
         "classType",
+        "scheduleType",
         "published",
         "ctaText",
         "createdAt",

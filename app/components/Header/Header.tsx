@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Nav from "../Nav/Nav";
 
-import yogaPlaceholderOne from "../../assets/images/yoga-placeholder-one.jpg";
+import yogaPlaceholder from "../../assets/images/caterinagiordostudio.jpg";
 
 interface HeaderProps {
     showHero: boolean;
@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header = ({
     showHero,
-    heroImage = yogaPlaceholderOne,
+    heroImage = yogaPlaceholder,
     headline = "Caterina Giordo",
     subtitle = "Yoga | Breathwork | Meditation",
 }: HeaderProps) => {

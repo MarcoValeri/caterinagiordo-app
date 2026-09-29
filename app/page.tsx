@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import SectionClasses from "./components/SectionClasses/SectionClasses";
 import { getClasses } from "./lib/classes";
 
-import yogaPlaceholder from "./assets/images/yoga-placeholder-one.jpg";
+import yogaPlaceholder from "./assets/images/caterinagiordostudio.jpg";
 
 const HomePage = async () => {
   const classes = await getClasses(3);
