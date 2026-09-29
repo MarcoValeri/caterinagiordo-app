@@ -48,8 +48,8 @@ const AdminSidebar = () => {
           </div>
           <div className="mb-5">
             <AdminMenu
-              pathName="/admin/classes"
-              label="Classes"
+              pathName="/admin/schedule"
+              label="Schedule"
               icon={MdEvent}
             />
           </div>

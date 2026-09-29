@@ -5,7 +5,7 @@ import logo from "../../assets/images/caterina-giordo-logo.png";
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Classes", href: "/classes" },
+  { label: "Schedule", href: "/schedule" },
   { label: "Contact", href: "/contact" },
 ];
 

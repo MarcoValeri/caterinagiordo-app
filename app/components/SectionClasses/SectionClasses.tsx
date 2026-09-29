@@ -47,6 +47,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
                     ? ClassType.OnLine
                     : ClassType.InPerson
                 }
+                scheduleType={classItem.scheduleType || undefined}
                 ctaText={classItem.ctaText || undefined}
               />
             ))}
@@ -58,7 +59,7 @@ const SectionClasses = ({ classes, showViewAll = false }: SectionClassesProps) =
         )}
         {showViewAll && classes.length > 0 && (
           <div className="mt-10 text-center">
-            <ButtonLink href="/classes" label="View all classes" />
+            <ButtonLink href="/schedule" label="View all schedule" />
           </div>
         )}
       </div>
